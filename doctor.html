@@ -1,0 +1,82 @@
+<?php
+    include("./php/conexion.php");
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+           <a href="index.html">
+             <img src="img/logo.png" alt="logo">
+           </a>
+        </div>
+        <h2>Taller Mecánico</h2>
+        
+        <div class="menu-container">
+        <div class="hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="hambnav" id="nav">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    </header>
+    <form action="" method="post">
+        <h1>Doctor</h1>
+        <input type="text" name="formulario" value="doctor" hidden>
+        <label for="doctor-nombre">Nombre: </label>
+        <input type="text" name="doctor-nombre" id="doctor-nombre">
+
+        <label for="doctor-nacimiento">Fecha de nacimiento:</label>
+        <input type="date" name="doctor-nacimiento" id="doctor-nacimiento">
+
+        <label for="doctor-cedula">Cedula profesional:</label>
+        <input type="text" name="doctor-cedula" id="doctor-cedula">
+
+        <label for="doctor-telefono">Teléfono:</label>
+        <input type="tel" name="doctor-telefono" id="doctor-telefono">
+
+        <label for="doctor-correo">Correo</label>
+        <input type="email" name="doctor-correo" id="doctor-correo">
+
+        <label for="doctor-especialidad">Especialidad:</label>
+        <select  name="doctor-especialidad" id="doctor-especialidad">
+            <option value="0" disabled selected>Seleccione una opción</option>
+            <option value="ginecológo">ginecológo</option>
+            <option value="general">general</option>
+            <option value="pediatra">pediatra</option>
+            <option value="neurológo">neurológo</option>
+            <option value="anestesiologo">anestesiologo</option>
+            <option value="cardiológo">cardiológo</option>
+        </select>
+
+        <div class="contenedor-submit">
+            <button type="submit" value="guardar" name="guardar">Resgistrar Médico</button>
+        </div>
+    </form>
+
+    <?php
+        include("./php/guardar.php")
+    ?>
+
+    <footer>
+        <p>Avenida Andrés Molina Enríque S/N</p>
+        <p>55 100 97293</p>
+    </footer>
+</body>
+<script src="/js/hamb.js"></script>
+</html>
